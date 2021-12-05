@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(35, 66, 52);
+    color: white;
+}
+
+div#wrapper {
+    display: grid;
+    max-width: 960px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, minmax(200px, auto));
+    grid-gap: 10px;
+    margin: 0 auto;
+}
+
+header {
+    border: solid 1px black;
+    grid-column: 1/4;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    grid-column: 1/4;
+    border: solid 1px black;
+}
+
+nav,
+aside {
+    border: solid 1px black;
+}
+
+aside {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-left: 0.5rem;
+}
+
+nav ul li {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    letter-spacing: 0.1rem;
+    margin-left: 0.25rem;
+    transition: ease-in-out 0.25s;
+    color: rgb(145, 10, 10);
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(56, 55, 55);
+}
+
+footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------GAME AREA -------------------*/
+
+div#cubePalette {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, minmax(80px, 80px));
+}
+
+div.cubes {
+    border: solid 1px black;
+    align-self: center;
+    justify-self: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    background-color: grey;
+}
